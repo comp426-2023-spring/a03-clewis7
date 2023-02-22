@@ -1,0 +1,26 @@
+{
+  "name": "node-rpsls",
+  "version": "0.0.1",
+  "description": "command line rock-paper-scissors-lizard-spock",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "node-rps rock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a03-clewis7.git"
+  },
+  "author": "clewis7",
+  "license": "MIT",
+  "bin": {
+    "node-rps": "./bin/rps-cli.js",
+    "node-rpsls": "rpsls-cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-clewis7/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-clewis7#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
