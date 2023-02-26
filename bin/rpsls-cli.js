@@ -22,21 +22,22 @@ if (argv.h || argv.help) {
     process.exit(0);
 }
 
-if (argv.r || argv.rules) {
-    console.log(
-    `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+const rules =  
+`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
 
-    - Scissors CUTS Paper
-    - Paper COVERS Rock
-    - Rock SMOOSHES Lizard
-    - Lizard POISONS Spock
-    - Spock SMASHES Scissors
-    - Scissors DECAPITATES Lizard
-    - Lizard EATS Paper
-    - Paper DISPROVES Spock
-    - Spock VAPORIZES Rock
-    - Rock CRUSHES Scissors`
-    );
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock SMOOSHES Lizard
+- Lizard POISONS Spock
+- Spock SMASHES Scissors
+- Scissors DECAPITATES Lizard
+- Lizard EATS Paper
+- Paper DISPROVES Spock
+- Spock VAPORIZES Rock
+- Rock CRUSHES Scissors`
+
+if (argv.r || argv.rules) {
+    console.log(rules);
     process.exit(0);
 }
 
@@ -49,6 +50,7 @@ if (argv._[0]) {
 
 if (game_result === undefined) {
 	console.error(`${argv._[0]} is out of range. Please choose rock, paper, scissors, lizard, or spock.`);
+    console.log(rules);
 } else {
 	console.log(JSON.stringify(game_result));
 }

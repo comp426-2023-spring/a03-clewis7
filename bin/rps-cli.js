@@ -21,14 +21,15 @@ if (argv.h || argv.help) {
     process.exit(0);
 }
 
-if (argv.r || argv.rules) {
-    console.log(
-    `Rules for Rock Paper Scissors:
+const rules = 
+`Rules for Rock Paper Scissors:
 
-        - Scissors CUTS Paper
-        - Paper COVERS Rock
-        - Rock CRUSHES Scissors`
-    );
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock CRUSHES Scissors`;
+
+if (argv.r || argv.rules) {
+    console.log(rules);
     process.exit(0);
 }
 
@@ -41,6 +42,7 @@ if (argv._[0]) {
 
 if (game_result === undefined) {
 	console.error(`${argv._[0]} is out of range. Please choose rock, paper, or scissors.`);
+    console.log(rules);
 } else {
 	console.log(JSON.stringify(game_result));
 }
